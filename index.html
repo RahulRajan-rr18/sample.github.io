@@ -1,1 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Images/react_image.svg "
+      class="icon"
+    />
+    <style>
+      * {
+        margin: 0;
+      }
+      .icon {
+        color: #0b8eb9;
+      }
+      .navbar {
+        height: 40px;
+        width: 100%;
+        background-color: rgb(38, 42, 66);
+        margin: 0;
+        display: flex;
+        /* justify-content: space-around; */
+        justify-content: space-between;
+      }
+      .bar {
+        font-size: 15px;
+        margin: 5px;
+        color: rgb(199, 208, 216);
+        display: none;
+      }
+      .navleft {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+      }
+      .react_icon {
+        color: rgb(46, 133, 209);
+        font-size: 30px;
+        margin: 5px;
+      }
+      .navcenter {
+        border-radius: 30px;
+        height: 28px;
+        background-color: rgb(74, 81, 122);
+        /* border: 1px solid white; */
+        margin: 6px 10px;
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .navcenter_left {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .navright {
+        display: flex;
+        gap: 18px;
+        color: rgb(135, 150, 161);
+        font-family: sans-serif;
+        font-size: 12px;
+        align-items: center;
+        margin: 0 10px;
+      }
+      .search {
+        color: rgb(135, 150, 161);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+      }
+      .search_icon {
+        color: rgb(135, 150, 161);
+        padding-left: 10px;
+        font-size: 12px;
+      }
+      .light_theme_icon {
+        color: rgb(135, 150, 161);
+      }
+      .language {
+        color: rgb(135, 150, 161);
+      }
+      .github_icon {
+        color: rgb(135, 150, 161);
+      }
+      .search2 {
+        color: rgb(135, 150, 161);
+        font-size: 15px;
+        display: none;
+      }
+      .shortcut_ctrl {
+        color: rgb(131, 157, 170);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 8px;
+        background-color: rgb(39, 39, 38);
+        padding: 3px;
+        border-radius: 4px;
+      }
+      .shortcut_k {
+        color: rgb(131, 157, 170);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 8px;
+        background-color: rgb(39, 39, 38);
+        padding: 3px;
+        border-radius: 4px;
+      }
+
+      .navcenter_right {
+        display: flex;
+        gap: 3px;
+        margin-right: 10px;
+      }
+      .container {
+        width: 100%;
+        height: 800px;
+        background-color: rgb(38, 42, 66);
+      }
+      .container {
+        padding-top: 100px;
+        text-align: center;
+      }
+      .react_icon_big {
+        font-size: 100px;
+        color: rgb(46, 133, 209);
+      }
+      .React {
+        color: White;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 30px;
+      }
+      .desc {
+        font-size: 30px;
+        color: aliceblue;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .learn_body,
+      .api_button {
+        width: auto;
+        height: 38px;
+        border-radius: 50px;
+        margin: 10px 2px;
+        padding: 8px 12px;
+        border: 0px;
+      }
+      .learn_body {
+        background-color: #0b8eb9;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #35454b;
+      }
+      .api_button {
+        border: 0.5px solid rgb(194, 183, 183);
+        background-color: rgb(38, 42, 66);
+        color: rgb(136, 147, 156);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      @media (width<750px) {
+        .learn,
+        .reference,
+        .community,
+        .blog {
+          display: none;
+        }
+        .bar {
+          display: block;
+        }
+      }
+      @media (width<500px) {
+        .search2 {
+          display: block;
+        }
+        .navcenter {
+          display: none;
+        }
+        .react_icon_big {
+          font-size: 50px;
+        }
+        .React {
+          font-size: 15px;
+        }
+        .desc {
+          font-size: 15px;
+          color: aliceblue;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        /* .learn_body,
+        .api_button {
+          width: auto;
+          height: 19px;
+          border-radius: 50px;
+          margin: 10px 2px;
+          padding: 8px 12px;
+          border: 0px;
+        } */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navleft">
+        <i class="fa-solid fa-bars bar"></i>
+        <i class="fa-brands fa-react react_icon"></i>
+        <p class="version" style="font-size: 12px; color: rgb(110, 121, 131)">
+          v19
+        </p>
+      </div>
+      <div class="navcenter">
+        <div class="navcenter_left">
+          <i class="fa-solid fa-magnifying-glass search_icon"></i>
+          <p class="search">Search</p>
+        </div>
+        <div class="navcenter_right">
+          <p class="shortcut_ctrl">Ctrl</p>
+          <p class="shortcut_k">K</p>
+        </div>
+      </div>
+      <div class="navright">
+        <p class="learn"><b>Learn</b></p>
+        <p class="reference"><b>Reference</b></p>
+        <p class="community"><b>Community</b></p>
+        <p class="blog"><b>Blog</b></p>
+        <i class="fa-solid fa-magnifying-glass search2"></i>
+        <i class="fa-solid fa-sun light_theme_icon" style="font-size: 17px"></i>
+        <i class="fa-solid fa-language language" style="font-size: 17px"></i>
+        <i class="fa-brands fa-github github_icon" style="font-size: 17px"></i>
+      </div>
+    </div>
+    <div class="container">
+      <i class="fa-brands fa-react react_icon_big"></i>
+      <p class="React"><b>React</b></p>
+      <p class="desc">The library for web and native user interface</p>
+      <div class="buttons">
+        <button class="learn_body">Learn react</button>
+        <button class="api_button">API Reference</button>
+      </div>
+    </div>
+  </body>
+</html>
 
